@@ -19,7 +19,7 @@ The action encapsulates the following other actions:
 
 **Required** The associated AWS Secret Access Key for a given AWS Account. 
 
-### `submodules_pat_token`
+### `submodules-pat`
 
 **Required** The PAT Access token required to access the submodules repository.
 
