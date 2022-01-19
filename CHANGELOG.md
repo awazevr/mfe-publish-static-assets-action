@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/awazevr/mfe-publish-static-assets-action/compare/v1.0.4...v1.0.5) (2022-01-19)
+
+
+### Bug Fixes
+
+* Add shell to step ([fd64bc9](https://github.com/awazevr/mfe-publish-static-assets-action/commit/fd64bc9c8d0a0b84caf8fb7fbc5f8e718e28bde1))
+
 ## [1.0.4](https://github.com/awazevr/mfe-publish-static-assets-action/compare/v1.0.3...v1.0.4) (2022-01-19)
 
 
