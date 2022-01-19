@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/awazevr/mfe-publish-static-assets-action/compare/v1.0.5...v1.0.6) (2022-01-19)
+
+
+### Bug Fixes
+
+* update PAT input ([73a13c0](https://github.com/awazevr/mfe-publish-static-assets-action/commit/73a13c0e02b4de9262594554b2ab4890f779b90f))
+
 ## [1.0.5](https://github.com/awazevr/mfe-publish-static-assets-action/compare/v1.0.4...v1.0.5) (2022-01-19)
 
 
