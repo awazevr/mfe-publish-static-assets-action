@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/awazevr/mfe-publish-static-assets-action/compare/v1.0.2...v1.0.3) (2022-01-19)
+
+
+### Bug Fixes
+
+* Another indentation issue ([680d01f](https://github.com/awazevr/mfe-publish-static-assets-action/commit/680d01f1eedd3c1d2f0676d2d8b9c22e1d39b8e6))
+
 ## [1.0.2](https://github.com/awazevr/mfe-publish-static-assets-action/compare/v1.0.1...v1.0.2) (2022-01-19)
 
 
