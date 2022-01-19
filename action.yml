@@ -51,9 +51,6 @@ runs:
       with:
         name: public-static-assets
         path: build/static-assets/public
-        
-    - name: ls artifacts
-      run: ls build/static-assets/next && ls build/static-assets/public
       
     - name: publish static assets
       env:
