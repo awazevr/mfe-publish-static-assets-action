@@ -50,7 +50,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Publish static assets
-        uses: awazevr/mfe-publish-static-assets-action@v1.0.0
+        uses: awazevr/mfe-publish-static-assets-action@v1.0.1
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
