@@ -13,8 +13,8 @@ inputs:
     description: 'AWS Resource Region'
     required: true
 
-  submodules-pat-token:
-    description: 'Submodule PAT Token'
+  submodules-pat:
+    description: 'personal access token to be able to checkout git submodules'
     required: true
 
   app-name:
@@ -27,7 +27,7 @@ runs:
   steps:
     - uses: actions/checkout@v2
       with:
-        token: ${{ inputs.submodules-pat-token }}
+        token: ${{ inputs.submodules-pat }}
         submodules: 'true'
         
     - uses: benjlevesque/short-sha@v1.2
