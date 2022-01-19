@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/awazevr/mfe-publish-static-assets-action/compare/v1.0.3...v1.0.4) (2022-01-19)
+
+
+### Bug Fixes
+
+* remove unnecessary step ([c82394b](https://github.com/awazevr/mfe-publish-static-assets-action/commit/c82394b4c4ae5cf3db4239ceaeb25c2d6d67164d))
+
 ## [1.0.3](https://github.com/awazevr/mfe-publish-static-assets-action/compare/v1.0.2...v1.0.3) (2022-01-19)
 
 
