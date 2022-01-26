@@ -57,9 +57,3 @@ runs:
         GIT_SHA: ${{ steps.short-sha.outputs.sha }}
       shell: bash
       run: ./mfe-infrastructure/ci/publish-static-assets.sh ${{ inputs.app-name }} ${{ env.GIT_SHA }}
-      
-    - uses: geekyeggo/delete-artifact@v1
-      with:
-        name: |
-          next-static-assets
-          public-static-assets
