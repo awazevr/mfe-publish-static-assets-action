@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/awazevr/mfe-publish-static-assets-action/compare/v1.0.6...v1.1.0) (2022-01-26)
+
+
+### Features
+
+* Add artifact cleanup ([29db186](https://github.com/awazevr/mfe-publish-static-assets-action/commit/29db1865838c75c1087b67d37613803c1e9f3e02))
+
 ## [1.0.6](https://github.com/awazevr/mfe-publish-static-assets-action/compare/v1.0.5...v1.0.6) (2022-01-19)
 
 
