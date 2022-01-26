@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/awazevr/mfe-publish-static-assets-action/compare/v1.1.0...v1.1.1) (2022-01-26)
+
+
+### Bug Fixes
+
+* Remove delete artifact step ([c32f953](https://github.com/awazevr/mfe-publish-static-assets-action/commit/c32f95374a84363b00a0023cc47f7837750a53b4))
+
 # [1.1.0](https://github.com/awazevr/mfe-publish-static-assets-action/compare/v1.0.6...v1.1.0) (2022-01-26)
 
 
