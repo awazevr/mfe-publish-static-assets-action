@@ -53,4 +53,29 @@ runs:
       env:
         GIT_SHA: ${{ steps.short-sha.outputs.sha }}
       shell: bash
-      run: ./mfe-infrastructure/ci/publish-static-assets.sh ${{ inputs.app-name }} ${{ env.GIT_SHA }}
+      run: |
+        STATIC_ASSETS_BUCKET=$(aws ssm get-parameters --names /checkout/dev/s3/static_assets_mfe/bucket_name --with-decryption --region ${{ inputs.aws-region }} | jq -r ".Parameters[0].Value")
+
+        CACHE_CONTROL_HEADER="public, max-age=31536000, immutable"
+
+        NEXTJS_STATIC_ASSETS_DIR="build/static-assets/next/static"
+        PUBLIC_STATIC_ASSETS_DIR="build/static-assets/public/"
+
+        PUBLIC_STATIC_ASSETS_STAGING_DIR="../stage/"
+
+        mkdir -p $PUBLIC_STATIC_ASSETS_STAGING_DIR
+
+        cp -r $PUBLIC_STATIC_ASSETS_DIR $PUBLIC_STATIC_ASSETS_STAGING_DIR
+
+        find $PUBLIC_STATIC_ASSETS_STAGING_DIR -type f -name "mockServiceWorker.js" -delete
+
+        echo "Uploading static assets for revision $GIT_HASH..."
+        echo "Checking for existing static assets for this revision..."
+
+        echo "Uploading Nextjs static assets directory to $STATIC_ASSETS_BUCKET/$APP_NAME/$GIT_HASH/_next/static.."
+        aws s3 cp $NEXTJS_STATIC_ASSETS_DIR s3://$STATIC_ASSETS_BUCKET/$APP_NAME/$GIT_HASH/_next/static --recursive --cache-control "$CACHE_CONTROL_HEADER"
+
+        echo "Uploading public files directory to $STATIC_ASSETS_BUCKET/$APP_NAME/$GIT_HASH/"
+        aws s3 cp $PUBLIC_STATIC_ASSETS_STAGING_DIR s3://$STATIC_ASSETS_BUCKET/$APP_NAME/$GIT_HASH/ --recursive --cache-control "$CACHE_CONTROL_HEADER"
+
+        echo "Static assets upload complete. See previous output for status."
