@@ -17,6 +17,10 @@ inputs:
     description: 'MFE app name (e.g. search-mfe)'
     required: true
 
+  static-assets-bucket:
+    description: 'Name of the static assets bucket'
+    required: true
+
 runs:
   using: 'composite'
   steps:
@@ -54,7 +58,7 @@ runs:
         GIT_SHA: ${{ steps.short-sha.outputs.sha }}
       shell: bash
       run: |
-        STATIC_ASSETS_BUCKET=$(aws ssm get-parameters --names /checkout/dev/s3/static_assets_mfe/bucket_name --with-decryption --region ${{ inputs.aws-region }} | jq -r ".Parameters[0].Value")
+        STATIC_ASSETS_BUCKET="${{ inputs.static-assets-bucket }}"
 
         CACHE_CONTROL_HEADER="public, max-age=31536000, immutable"
 
