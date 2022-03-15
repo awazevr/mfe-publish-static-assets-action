@@ -63,9 +63,9 @@ runs:
 
         PUBLIC_STATIC_ASSETS_STAGING_DIR="../stage/"
 
-        GIT_HASH = ${{ env.GIT_SHA }}
+        GIT_HASH = "${{ env.GIT_SHA }}"
 
-        APP_NAME = ${{ inputs.app-name }}
+        APP_NAME = "${{ inputs.app-name }}"
 
         mkdir -p $PUBLIC_STATIC_ASSETS_STAGING_DIR
 
