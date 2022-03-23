@@ -1,3 +1,25 @@
+# [1.2.0](https://github.com/awazevr/mfe-publish-static-assets-action/compare/v1.1.1...v1.2.0) (2022-03-23)
+
+
+### Bug Fixes
+
+* **CHECK-362:** add quotes for valid variable declaration ([7c3ebc2](https://github.com/awazevr/mfe-publish-static-assets-action/commit/7c3ebc21ae327e1dba18b6814b7e45caf7a19340))
+* **CHECK-362:** remove spaces around variables ([175700f](https://github.com/awazevr/mfe-publish-static-assets-action/commit/175700ff10ce84fed242f04f4e3cc7b6efd6b9ee))
+
+
+### Features
+
+* **CHECK-362:** add aws role ([8fd4294](https://github.com/awazevr/mfe-publish-static-assets-action/commit/8fd42944af404c9e8d42dbe5e2a0158329cbc2b7))
+* **CHECK-362:** add missing vairables for GIT_HASH and APP_NAME ([52e0111](https://github.com/awazevr/mfe-publish-static-assets-action/commit/52e01116d53a31531af93f5962bf64e63fe97d0a))
+* **CHECK-362:** add public static assets script ([6bc2f8d](https://github.com/awazevr/mfe-publish-static-assets-action/commit/6bc2f8d5907a6f5d51d73f9c860b647d462198cb))
+* **CHECK-362:** move aws region on top of role ([dbe66c9](https://github.com/awazevr/mfe-publish-static-assets-action/commit/dbe66c94c8f8a977fd45ca4c181d92a9c78a3cbe))
+* **CHECK-362:** parameterise static asset bucket name ([85c367f](https://github.com/awazevr/mfe-publish-static-assets-action/commit/85c367fc8f55e35c5cd079b63d5932eed59b956a))
+
+
+### BREAKING CHANGES
+
+* **CHECK-362:** replacing login with aws keys with logging in with a role
+
 ## [1.1.1](https://github.com/awazevr/mfe-publish-static-assets-action/compare/v1.1.0...v1.1.1) (2022-01-26)
 
 
